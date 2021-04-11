@@ -2,15 +2,13 @@ import Foundation
 import Moya
 
 enum API {
-    case status
-    case halls
-    case hall(id: String)
-    case managers(hallId: String)
-    case meals(hallId: String, date: String)
-    case meal(id: Int)
-    case items(mealId: Int)
-    case item(id: Int)
-    case nutrition(itemId: Int)
+    case categories
+    case category(id: String)
+    case locations
+    case location(id: Int)
+    case menus(date: String, mealId: Int, locationId: Int)
+    case recipes
+    case recipe(id: Int)
 }
 
 extension API: TargetType {
@@ -28,7 +26,7 @@ extension API: TargetType {
             return "locations"
         case .location(let id):
             return "locations/\(id)"
-        case .menus(let _, let _, let _):
+        case .menus(_, _, _):
             return "menus"
         case .recipes:
             return "recipes"
@@ -47,11 +45,11 @@ extension API: TargetType {
 
     var task: Task {
         switch self {
-        case .menus(let date, let meal, let location):
+        case .menus(let date, let mealId, let locationId):
             return .requestParameters(parameters: [
                 "date": date,
-                "meal": meal,
-                "location": location
+                "meal": mealId,
+                "location": locationId
             ], encoding: URLEncoding.queryString)
         default:
             return .requestParameters(parameters: [:], encoding: URLEncoding.queryString)
