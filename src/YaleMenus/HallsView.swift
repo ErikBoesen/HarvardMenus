@@ -87,7 +87,7 @@ struct OccupancyBar: View {
 }
 
 struct HallsView: View {
-    @ObservedObject var model = HallsViewModel()
+    @ObservedObject var model = HomeViewModel()
     @EnvironmentObject private var navigationStack: NavigationStack
     @State private var isReloading = false
 
@@ -113,7 +113,7 @@ struct HallsView: View {
                             .frame(width: geometry.size.width)
                         }.onTapGesture {
                             DispatchQueue.main.async {
-                                self.navigationStack.push(HallView(hall: hall!))
+                                self.navigationStack.push(LocationView(hall: hall!))
                             }
                         }
                     } else {

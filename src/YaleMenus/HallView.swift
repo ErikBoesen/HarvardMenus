@@ -14,35 +14,37 @@ extension Binding {
 }
 
 struct ItemPreviewView: View {
-    let item: Item
+    let recipe: Recipe
     let allowed: Bool
     @EnvironmentObject private var navigationStack: NavigationStack
 
-    init(item: Item, allowed: Bool) {
-        self.item = item
+    init(recipe: Recipe, allowed: Bool) {
+        self.recipe = recipe
         self.allowed = allowed
     }
 
     func getCourseImage() -> String {
-        if self.item.course == "Soup and Salad" {
-            if self.item.name.contains("Salad") {
-                return "custom_salad"
-            }
-            return "custom_soup"
-        }
-        if self.item.course == "Fruit and Yogurt" {
-            if self.item.name.contains("Yogurt") {
-                return "custom_yogurt"
-            }
-            return "custom_fruit"
-        }
-        return self.item.course
+//        if self.recipe.course == "Soup and Salad" {
+//            if self.recipe.name.contains("Salad") {
+//                return "custom_salad"
+//            }
+//            return "custom_soup"
+//        }
+//        if self.recipe.course == "Fruit and Yogurt" {
+//            if self.recipe.name.contains("Yogurt") {
+//                return "custom_yogurt"
+//            }
+//            return "custom_fruit"
+//        }
+//        return self.recipe.
+        // TODO: implement
+        return "Entree"
     }
 
     var body: some View {
         Button(action: {
             DispatchQueue.main.async {
-                self.navigationStack.push(RecipeView(item: self.item))
+                self.navigationStack.push(RecipeView(recipe: self.recipe))
             }
         }) {
             HStack {
@@ -67,13 +69,13 @@ struct ItemPreviewView: View {
     }
 }
 
-struct HallView: View {
-    @ObservedObject var model: HallViewModel
+struct LocationView: View {
+    @ObservedObject var model: LocationViewModel
     @State private var choosingDate = false
     @State private var chosenDate = Date()
 
-    init(hall: Hall) {
-        self.model = HallViewModel(hall: hall)
+    init(location: Location) {
+        self.model = LocationViewModel(location: location)
     }
 
     func openDatePicker() {

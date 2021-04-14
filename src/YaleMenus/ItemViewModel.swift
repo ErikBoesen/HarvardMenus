@@ -5,7 +5,7 @@ class RecipeViewModel: ObservableObject, Identifiable {
     let nm = NetworkManager()
     let settings = Settings()
 
-    @Published var item: Recipe
+    @Published var recipe: Recipe
     @Published var nutrition: Nutrition?
 
     init(recipe: Recipe, defaults: UserDefaults = .standard) {

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		030E653325322CB200B6032F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E653225322CB200B6032F /* NetworkManager.swift */; };
-		030E653525351E1B00B6032F /* HallsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E653425351E1B00B6032F /* HallsViewModel.swift */; };
+		030E653525351E1B00B6032F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E653425351E1B00B6032F /* HomeViewModel.swift */; };
 		030E6537253659D600B6032F /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E6536253659D600B6032F /* Loader.swift */; };
-		030E65392537FB5F00B6032F /* HallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E65382537FB5F00B6032F /* HallView.swift */; };
-		030E653B2537FB6F00B6032F /* HallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E653A2537FB6F00B6032F /* HallViewModel.swift */; };
+		030E65392537FB5F00B6032F /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E65382537FB5F00B6032F /* LocationView.swift */; };
+		030E653B2537FB6F00B6032F /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E653A2537FB6F00B6032F /* LocationViewModel.swift */; };
 		03404ADA259ADCD8002EB88D /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03404AD9259ADCD8002EB88D /* Splash.swift */; };
 		03404ADC259AE165002EB88D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03404ADB259AE165002EB88D /* Colors.xcassets */; };
 		03404ADE259AE493002EB88D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03404ADD259AE493002EB88D /* Colors.swift */; };
@@ -70,10 +70,10 @@
 
 /* Begin PBXFileReference section */
 		030E653225322CB200B6032F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		030E653425351E1B00B6032F /* HallsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallsViewModel.swift; sourceTree = "<group>"; };
+		030E653425351E1B00B6032F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		030E6536253659D600B6032F /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
-		030E65382537FB5F00B6032F /* HallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallView.swift; sourceTree = "<group>"; };
-		030E653A2537FB6F00B6032F /* HallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallViewModel.swift; sourceTree = "<group>"; };
+		030E65382537FB5F00B6032F /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		030E653A2537FB6F00B6032F /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		03404AD9259ADCD8002EB88D /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		03404ADB259AE165002EB88D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		03404ADD259AE493002EB88D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		0348CB9025AD381D0089A94B /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "../../../fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		0348CB9125AD381D0089A94B /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		0348CB9225AD381D0089A94B /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ExtraBold.ttf"; path = "../../../fonts/Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
-		035DF3E525291BCC004C95B0 /* Yale Menus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yale Menus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		035DF3E525291BCC004C95B0 /* Harvard Menus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Harvard Menus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		035DF3E825291BCC004C95B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		035DF3EA25291BCC004C95B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		035DF3EC25291BCC004C95B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		035DF3E625291BCC004C95B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				035DF3E525291BCC004C95B0 /* Yale Menus.app */,
+				035DF3E525291BCC004C95B0 /* Harvard Menus.app */,
 				035DF3FB25291BCE004C95B0 /* YaleMenusTests.xctest */,
 				035DF40625291BCE004C95B0 /* YaleMenusUITests.xctest */,
 			);
@@ -206,9 +206,9 @@
 				03404ADD259AE493002EB88D /* Colors.swift */,
 				03CF1FEC25C4CA480014C923 /* components */,
 				035DF418252920EE004C95B0 /* HallsView.swift */,
-				030E653425351E1B00B6032F /* HallsViewModel.swift */,
-				030E65382537FB5F00B6032F /* HallView.swift */,
-				030E653A2537FB6F00B6032F /* HallViewModel.swift */,
+				030E653425351E1B00B6032F /* HomeViewModel.swift */,
+				030E65382537FB5F00B6032F /* LocationView.swift */,
+				030E653A2537FB6F00B6032F /* LocationViewModel.swift */,
 				03476DC6256770D300E4587C /* RecipeView.swift */,
 				03476DC8256770ED00E4587C /* RecipeViewModel.swift */,
 				03404ADF259AFCEB002EB88D /* SettingsView.swift */,
@@ -313,7 +313,7 @@
 			);
 			name = YaleMenus;
 			productName = YaleMenus;
-			productReference = 035DF3E525291BCC004C95B0 /* Yale Menus.app */;
+			productReference = 035DF3E525291BCC004C95B0 /* Harvard Menus.app */;
 			productType = "com.apple.product-type.application";
 		};
 		035DF3FA25291BCE004C95B0 /* YaleMenusTests */ = {
@@ -572,11 +572,11 @@
 				03476DC9256770ED00E4587C /* RecipeViewModel.swift in Sources */,
 				03404AE0259AFCEB002EB88D /* SettingsView.swift in Sources */,
 				035DF3EB25291BCC004C95B0 /* SceneDelegate.swift in Sources */,
-				030E653525351E1B00B6032F /* HallsViewModel.swift in Sources */,
+				030E653525351E1B00B6032F /* HomeViewModel.swift in Sources */,
 				03404ADE259AE493002EB88D /* Colors.swift in Sources */,
 				030E653325322CB200B6032F /* NetworkManager.swift in Sources */,
-				030E65392537FB5F00B6032F /* HallView.swift in Sources */,
-				030E653B2537FB6F00B6032F /* HallViewModel.swift in Sources */,
+				030E65392537FB5F00B6032F /* LocationView.swift in Sources */,
+				030E653B2537FB6F00B6032F /* LocationViewModel.swift in Sources */,
 				035DF41D25292338004C95B0 /* API.swift in Sources */,
 				03CF1FEE25C4CA680014C923 /* Header.swift in Sources */,
 				030E6537253659D600B6032F /* Loader.swift in Sources */,
@@ -759,9 +759,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ericfoster.YaleMenus;
-				PRODUCT_NAME = "Yale Menus";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harvardmenus.app;
+				PRODUCT_NAME = "Harvard Menus";
 				PROVISIONING_PROFILE_SPECIFIER = "Yale Menus 2021";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -783,9 +783,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ericfoster.YaleMenus;
-				PRODUCT_NAME = "Yale Menus";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harvardmenus.app;
+				PRODUCT_NAME = "Harvard Menus";
 				PROVISIONING_PROFILE_SPECIFIER = "Yale Menus 2021";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

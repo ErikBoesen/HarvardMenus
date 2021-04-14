@@ -1,6 +1,6 @@
 import Foundation
 
-class HallViewModel: ObservableObject, Identifiable {
+class LocationViewModel: ObservableObject, Identifiable {
     let id = UUID()
     let nm = NetworkManager()
     let settings = Settings()

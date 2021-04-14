@@ -79,7 +79,7 @@ extension Nutrient: Decodable {
     
     init(from decoder: Decoder) {
         let container = try decoder.container(keyedBy: NutrientCodingKeys.self)
-        
+
         amount = try container.decode(String.self, forKey: .amount)
         percent = try container.decode(Int?.self, forKey: .percent)
     }
