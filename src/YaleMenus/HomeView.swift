@@ -93,9 +93,9 @@ struct HomeView: View {
 
     var body: some View {
         VStack {
-            if self.model.halls != nil {
-                HallGrid(items: self.model.halls!, rows: 5, columns: 3) { hall, _, _ in
-                    if hall != nil {
+            if self.model.locations != nil {
+                HallGrid(items: self.model.locations!, rows: 5, columns: 3) { location, _, _ in
+                    if location != nil {
                         GeometryReader { geometry in
                             VStack(alignment: .center, spacing: 0) {
                                 //OccupancyBar(occupancy: hall!.occupancy)
@@ -109,11 +109,11 @@ struct HomeView: View {
 //                                    .foregroundColor(.mainDesaturated)
                                     .padding(.top, 4)
                             }
-                            .opacity(hall!.open ? 1 : 0.5)
+                            .opacity(location!.open ? 1 : 0.5)
                             .frame(width: geometry.size.width)
                         }.onTapGesture {
                             DispatchQueue.main.async {
-                                self.navigationStack.push(LocationView(hall: hall!))
+                                self.navigationStack.push(LocationView(location: location!))
                             }
                         }
                     } else {
