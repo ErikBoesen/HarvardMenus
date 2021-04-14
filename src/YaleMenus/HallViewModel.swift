@@ -5,7 +5,7 @@ class HallViewModel: ObservableObject, Identifiable {
     let nm = NetworkManager()
     let settings = Settings()
 
-    @Published var hall: Hall
+    @Published var hall: Location
     @Published var meals: [Date: [Meal]] = [:]
     @Published var mealNames: [String]?
     @Published var mealIndex: Int = 0
@@ -17,7 +17,7 @@ class HallViewModel: ObservableObject, Identifiable {
     public let timeFormatterInternal = DateFormatter()
     public let timeFormatterExternal = DateFormatter()
 
-    init(hall: Hall) {
+    init(hall: Location) {
         self.hall = hall
         self.dateFormatterInternal.dateFormat = "yyyy-MM-dd"
         self.dateFormatterExternal.dateFormat = "MMMM d"

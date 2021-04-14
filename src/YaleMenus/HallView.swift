@@ -42,7 +42,7 @@ struct ItemPreviewView: View {
     var body: some View {
         Button(action: {
             DispatchQueue.main.async {
-                self.navigationStack.push(ItemView(item: self.item))
+                self.navigationStack.push(RecipeView(item: self.item))
             }
         }) {
             HStack {

@@ -19,11 +19,9 @@
 		03404AE2259AFCFD002EB88D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03404AE1259AFCFD002EB88D /* Settings.swift */; };
 		03404AE4259BACF2002EB88D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03404AE3259BACF2002EB88D /* Font.swift */; };
 		03404AF6259BE9F0002EB88D /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03404AF5259BE9F0002EB88D /* InformationView.swift */; };
-		03404AF8259D780B002EB88D /* HallInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03404AF7259D780B002EB88D /* HallInfoView.swift */; };
-		03404AFA259D795B002EB88D /* HallInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03404AF9259D795B002EB88D /* HallInfoViewModel.swift */; };
 		0345691525BCA79C00B5B406 /* loader_light.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 0345691425BCA79C00B5B406 /* loader_light.m4v */; };
-		03476DC7256770D300E4587C /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03476DC6256770D300E4587C /* ItemView.swift */; };
-		03476DC9256770ED00E4587C /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03476DC8256770ED00E4587C /* ItemViewModel.swift */; };
+		03476DC7256770D300E4587C /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03476DC6256770D300E4587C /* RecipeView.swift */; };
+		03476DC9256770ED00E4587C /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03476DC8256770ED00E4587C /* RecipeViewModel.swift */; };
 		0348CB9325AD381D0089A94B /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0348CB8A25AD381D0089A94B /* Montserrat-Light.ttf */; };
 		0348CB9425AD381D0089A94B /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0348CB8B25AD381D0089A94B /* Montserrat-ExtraLight.ttf */; };
 		0348CB9525AD381D0089A94B /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0348CB8C25AD381D0089A94B /* Montserrat-Black.ttf */; };
@@ -83,11 +81,9 @@
 		03404AE1259AFCFD002EB88D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		03404AE3259BACF2002EB88D /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		03404AF5259BE9F0002EB88D /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
-		03404AF7259D780B002EB88D /* HallInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallInfoView.swift; sourceTree = "<group>"; };
-		03404AF9259D795B002EB88D /* HallInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallInfoViewModel.swift; sourceTree = "<group>"; };
 		0345691425BCA79C00B5B406 /* loader_light.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = loader_light.m4v; sourceTree = "<group>"; };
-		03476DC6256770D300E4587C /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
-		03476DC8256770ED00E4587C /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		03476DC6256770D300E4587C /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		03476DC8256770ED00E4587C /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		0348CB8A25AD381D0089A94B /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Light.ttf"; path = "../../../fonts/Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		0348CB8B25AD381D0089A94B /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ExtraLight.ttf"; path = "../../../fonts/Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		0348CB8C25AD381D0089A94B /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Black.ttf"; path = "../../../fonts/Montserrat-Black.ttf"; sourceTree = "<group>"; };
@@ -213,10 +209,8 @@
 				030E653425351E1B00B6032F /* HallsViewModel.swift */,
 				030E65382537FB5F00B6032F /* HallView.swift */,
 				030E653A2537FB6F00B6032F /* HallViewModel.swift */,
-				03404AF7259D780B002EB88D /* HallInfoView.swift */,
-				03404AF9259D795B002EB88D /* HallInfoViewModel.swift */,
-				03476DC6256770D300E4587C /* ItemView.swift */,
-				03476DC8256770ED00E4587C /* ItemViewModel.swift */,
+				03476DC6256770D300E4587C /* RecipeView.swift */,
+				03476DC8256770ED00E4587C /* RecipeViewModel.swift */,
 				03404ADF259AFCEB002EB88D /* SettingsView.swift */,
 				03404AE1259AFCFD002EB88D /* Settings.swift */,
 				03404AF5259BE9F0002EB88D /* InformationView.swift */,
@@ -572,11 +566,10 @@
 				035DF3E925291BCC004C95B0 /* AppDelegate.swift in Sources */,
 				035DF419252920EE004C95B0 /* HallsView.swift in Sources */,
 				03404ADA259ADCD8002EB88D /* Splash.swift in Sources */,
-				03404AF8259D780B002EB88D /* HallInfoView.swift in Sources */,
 				035DF41B252922F4004C95B0 /* SegmentedPicker.swift in Sources */,
 				03404AE4259BACF2002EB88D /* Font.swift in Sources */,
 				03404AF6259BE9F0002EB88D /* InformationView.swift in Sources */,
-				03476DC9256770ED00E4587C /* ItemViewModel.swift in Sources */,
+				03476DC9256770ED00E4587C /* RecipeViewModel.swift in Sources */,
 				03404AE0259AFCEB002EB88D /* SettingsView.swift in Sources */,
 				035DF3EB25291BCC004C95B0 /* SceneDelegate.swift in Sources */,
 				030E653525351E1B00B6032F /* HallsViewModel.swift in Sources */,
@@ -587,8 +580,7 @@
 				035DF41D25292338004C95B0 /* API.swift in Sources */,
 				03CF1FEE25C4CA680014C923 /* Header.swift in Sources */,
 				030E6537253659D600B6032F /* Loader.swift in Sources */,
-				03404AFA259D795B002EB88D /* HallInfoViewModel.swift in Sources */,
-				03476DC7256770D300E4587C /* ItemView.swift in Sources */,
+				03476DC7256770D300E4587C /* RecipeView.swift in Sources */,
 				035DF3ED25291BCC004C95B0 /* ContentView.swift in Sources */,
 				035DF41F25293FA3004C95B0 /* Models.swift in Sources */,
 				03404AE2259AFCFD002EB88D /* Settings.swift in Sources */,

@@ -2,19 +2,19 @@ import SwiftUI
 import NavigationStack
 
 struct HallGrid<Content: View>: View {
-    let items: [Hall]
+    let items: [Location]
     let rows: Int
     let columns: Int
-    let content: (Hall?, Int, Int) -> Content
+    let content: (Location?, Int, Int) -> Content
 
-    init(items: [Hall], rows: Int, columns: Int, @ViewBuilder content: @escaping (Hall?, Int, Int) -> Content) {
+    init(items: [Location], rows: Int, columns: Int, @ViewBuilder content: @escaping (Location?, Int, Int) -> Content) {
         self.items = items
         self.rows = rows
         self.columns = columns
         self.content = content
     }
 
-    func item(n: Int) -> Hall? {
+    func item(n: Int) -> Location? {
         if n <= self.items.count {
             // Offset last element by one for logo
             if n == self.items.count - 1 {
@@ -98,13 +98,13 @@ struct HallsView: View {
                     if hall != nil {
                         GeometryReader { geometry in
                             VStack(alignment: .center, spacing: 0) {
-                                OccupancyBar(occupancy: hall!.occupancy)
-                                    .padding(EdgeInsets(top: 5, leading: 0, bottom: 8, trailing: 0))
+                                //OccupancyBar(occupancy: hall!.occupancy)
+                                //    .padding(EdgeInsets(top: 5, leading: 0, bottom: 8, trailing: 0))
                                 Image(hall!.id)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.height / 1.7)
-                                Text(hall!.nickname)
+                                Text(hall!.name)
                                     .font(.appBodyMedium)
                                     .foregroundColor(.mainDesaturated)
                                     .padding(.top, 4)

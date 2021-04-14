@@ -84,42 +84,42 @@ struct NutritionRowView: View {
     }
 }
 
-struct ItemView: View {
-    @ObservedObject var model: ItemViewModel
+struct RecipeView: View {
+    @ObservedObject var model: RecipeViewModel
 
-    init(item: Item) {
-        self.model = ItemViewModel(item: item)
+    init(recipe: Recipe) {
+        self.model = RecipeViewModel(recipe: recipe)
     }
 
     var body: some View {
         VStack {
-            Header(text: self.model.item.course)
+            Header(text: self.model.recipe.course)
             if !self.model.settings.showNutrition || self.model.nutrition != nil {
                 ScrollView {
                     VStack {
                         // TODO: bold and cleanup
-                        Text(self.model.item.name)
+                        Text(self.model.recipe.name)
                             .font(.appTitle)
                             .foregroundColor(.main)
                             .multilineTextAlignment(.center)
                         VStack {
                             Group {
-                                if self.model.item.meat { AllergenView(allergen: "meat") }
-                                if self.model.item.animalProducts { AllergenView(allergen: "animal_products") }
-                                if self.model.item.alcohol { AllergenView(allergen: "alcohol") }
-                                if self.model.item.treeNut { AllergenView(allergen: "tree_nut") }
-                                if self.model.item.shellfish { AllergenView(allergen: "shellfish") }
-                                if self.model.item.peanuts { AllergenView(allergen: "peanuts") }
-                                if self.model.item.dairy { AllergenView(allergen: "dairy") }
+                                if self.model.recipe.meat { AllergenView(allergen: "meat") }
+                                if self.model.recipe.animalProducts { AllergenView(allergen: "animal_products") }
+                                if self.model.recipe.alcohol { AllergenView(allergen: "alcohol") }
+                                if self.model.recipe.treeNut { AllergenView(allergen: "tree_nut") }
+                                if self.model.recipe.shellfish { AllergenView(allergen: "shellfish") }
+                                if self.model.recipe.peanuts { AllergenView(allergen: "peanuts") }
+                                if self.model.recipe.dairy { AllergenView(allergen: "dairy") }
                             }
                             Group {
-                                if self.model.item.egg { AllergenView(allergen: "egg") }
-                                if self.model.item.pork { AllergenView(allergen: "pork") }
-                                if self.model.item.fish { AllergenView(allergen: "fish") }
-                                if self.model.item.soy { AllergenView(allergen: "soy") }
-                                if self.model.item.wheat { AllergenView(allergen: "wheat") }
-                                if self.model.item.gluten { AllergenView(allergen: "gluten") }
-                                if self.model.item.coconut { AllergenView(allergen: "coconut") }
+                                if self.model.recipe.egg { AllergenView(allergen: "egg") }
+                                if self.model.recipe.pork { AllergenView(allergen: "pork") }
+                                if self.model.recipe.fish { AllergenView(allergen: "fish") }
+                                if self.model.recipe.soy { AllergenView(allergen: "soy") }
+                                if self.model.recipe.wheat { AllergenView(allergen: "wheat") }
+                                if self.model.recipe.gluten { AllergenView(allergen: "gluten") }
+                                if self.model.recipe.coconut { AllergenView(allergen: "coconut") }
                             }
                         }.padding(.bottom)
                         if self.model.settings.showNutrition {
@@ -150,7 +150,7 @@ struct ItemView: View {
                             }
                         }
                         Divider()
-                        Paragraph(text: "Ingredients: \(self.model.item.ingredients)")
+                        Paragraph(text: "Ingredients: \(self.model.recipe.ingredients)")
                     }
                 }
                 // TODO: is this still needed?

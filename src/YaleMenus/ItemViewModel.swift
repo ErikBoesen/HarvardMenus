@@ -1,19 +1,19 @@
 import Foundation
 
-class ItemViewModel: ObservableObject, Identifiable {
+class RecipeViewModel: ObservableObject, Identifiable {
     let id = UUID()
     let nm = NetworkManager()
     let settings = Settings()
 
-    @Published var item: Item
+    @Published var item: Recipe
     @Published var nutrition: Nutrition?
 
-    init(item: Item, defaults: UserDefaults = .standard) {
-        self.item = item
+    init(recipe: Recipe, defaults: UserDefaults = .standard) {
+        self.recipe = recipe
         if self.settings.showNutrition {
-            nm.getNutrition(itemId: self.item.id, completion: { nutrition in
-                self.nutrition = nutrition
-            })
+//            nm.getNutrition(recipeId: self.recipe.id, completion: { nutrition in
+//                self.nutrition = nutrition
+//            })
         }
     }
 }
