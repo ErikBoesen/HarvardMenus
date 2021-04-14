@@ -6,7 +6,7 @@ struct ContentView: View {
         ZStack {
             Color.background.edgesIgnoringSafeArea(.all)
             NavigationStackView {
-                HallsView()
+                HomeView()
             }.padding(.horizontal)
         }
     }

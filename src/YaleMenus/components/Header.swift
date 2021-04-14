@@ -4,11 +4,11 @@ import NavigationStack
 struct Header: View {
     @EnvironmentObject private var navigationStack: NavigationStack
     var text: String
-    var hall: Hall?
+    var location: Location?
 
-    init(text: String, hall: Hall? = nil) {
+    init(text: String, location: Location? = nil) {
         self.text = text
-        self.hall = hall
+        self.location = location
     }
 
     var body: some View {
@@ -30,10 +30,10 @@ struct Header: View {
                 .multilineTextAlignment(.trailing)
                 // TODO: find a cleaner way to reduce padding
                 .padding(.vertical, 5)
-//            if (self.hall != nil) {
+//            if (self.location != nil) {
 //                Spacer()
 //                Button(action: {
-//                    self.navigationStack.push(HallInfoView(hall: self.hall!))
+//                    self.navigationStack.push(LocationInfoView(location: self.location!))
 //                }) {
 //                    Image(systemName: "info.circle.fill")
 //                        .resizable()

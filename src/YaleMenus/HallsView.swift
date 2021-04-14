@@ -86,7 +86,7 @@ struct OccupancyBar: View {
     }
 }
 
-struct HallsView: View {
+struct HomeView: View {
     @ObservedObject var model = HomeViewModel()
     @EnvironmentObject private var navigationStack: NavigationStack
     @State private var isReloading = false
@@ -106,7 +106,7 @@ struct HallsView: View {
                                     .frame(height: geometry.size.height / 1.7)
                                 Text(hall!.name)
                                     .font(.appBodyMedium)
-                                    .foregroundColor(.mainDesaturated)
+//                                    .foregroundColor(.mainDesaturated)
                                     .padding(.top, 4)
                             }
                             .opacity(hall!.open ? 1 : 0.5)
@@ -138,11 +138,11 @@ struct HallsView: View {
                                         self.navigationStack.push(SettingsView())
                                     }
                                 }
-                            Text("Yale Menus")
-                                .font(.appTitle)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .foregroundColor(.mainDesaturated)
-                                .multilineTextAlignment(.center)
+//                            Text("Harvard Menus")
+//                                .font(.appTitle)
+//                                .fixedSize(horizontal: false, vertical: true)
+//                                .foregroundColor(.mainDesaturated)
+//                                .multilineTextAlignment(.center)
                             Spacer()
                         }.frame(maxWidth: .infinity)
                     }

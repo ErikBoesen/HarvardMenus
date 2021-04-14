@@ -5,11 +5,11 @@ class LocationViewModel: ObservableObject, Identifiable {
     let nm = NetworkManager()
     let settings = Settings()
 
-    @Published var hall: Location
-    @Published var meals: [Date: [Meal]] = [:]
+    @Published var location: Location
+    @Published var meals: [Date: [Menu]] = [:]
     @Published var mealNames: [String]?
     @Published var mealIndex: Int = 0
-    @Published var items: [Date: [[Item]?]] = [:]
+    @Published var recipes: [Date: [[Recipe]?]] = [:]
     @Published var allowed: [Date: [[Bool]?]] = [:]
     @Published var date: Date = Date()
     public let dateFormatterInternal = DateFormatter()
@@ -17,8 +17,8 @@ class LocationViewModel: ObservableObject, Identifiable {
     public let timeFormatterInternal = DateFormatter()
     public let timeFormatterExternal = DateFormatter()
 
-    init(hall: Location) {
-        self.hall = hall
+    init(location: Location) {
+        self.location = location
         self.dateFormatterInternal.dateFormat = "yyyy-MM-dd"
         self.dateFormatterExternal.dateFormat = "MMMM d"
         self.timeFormatterInternal.dateFormat = "HH:mm"
@@ -29,64 +29,66 @@ class LocationViewModel: ObservableObject, Identifiable {
     }
 
     func getPresentMeal() -> Int {
-        let today = Date()
-        if Calendar.current.isDate(self.date, inSameDayAs: today) {
-            let now = self.timeFormatterInternal.string(from: today)
-            for (index, meal) in self.meals[self.date]!.enumerated() {
-                if now < meal.endTime {
-                    return index
-                }
-            }
-        }
+        // TODO: reenable
+//        let today = Date()
+//        if Calendar.current.isDate(self.date, inSameDayAs: today) {
+//            let now = self.timeFormatterInternal.string(from: today)
+//            for (index, meal) in self.meals[self.date]!.enumerated() {
+//                if now < meal.endTime {
+//                    return index
+//                }
+//            }
+//        }
         return 0
     }
 
     func getMeals() {
         let date = self.date
         if self.meals[date] == nil {
-            nm.getMeals(hallId: self.hall.id,
-                        date: self.dateFormatterInternal.string(from: date),
-                        completion: { meals in
-                self.meals[date] = meals
-                if self.items[date] == nil {
-                    self.items[date] = [[Item]?](repeating: nil, count: meals.count)
-                    self.allowed[date] = [[Bool]?](repeating: nil, count: meals.count)
-                    self.mealIndex = self.getPresentMeal()
-                    // TODO: switch to whatever current/soonest meal is
-                    self.getItems(date: date, mealIndex: self.mealIndex)
-                }
-            })
+            // TODO: reenable
+//            nm.getMeals(hallId: self.hall.id,
+//                        date: self.dateFormatterInternal.string(from: date),
+//                        completion: { meals in
+//                self.meals[date] = meals
+//                if self.recipes[date] == nil {
+//                    self.recipes[date] = [[Recipe]?](repeating: nil, count: meals.count)
+//                    self.allowed[date] = [[Bool]?](repeating: nil, count: meals.count)
+//                    self.mealIndex = self.getPresentMeal()
+//                    // TODO: switch to whatever current/soonest meal is
+//                    self.getRecipes(date: date, mealIndex: self.mealIndex)
+//                }
+//            })
         }
     }
 
-    func getItems(date: Date, mealIndex: Int) {
+    func getRecipes(date: Date, mealIndex: Int) {
         if (self.meals[date] != nil &&
-            self.items[date] != nil &&
-            mealIndex < self.items[date]!.count &&
-            self.items[date]![mealIndex] == nil) {
-
-            nm.getItems(mealId: self.meals[date]![mealIndex].id, completion: { items in
-                self.allowed[date]![mealIndex] = items.map { item in
-                    !(
-                        (self.settings.meat && item.meat) ||
-                        (self.settings.animalProducts && item.animalProducts) ||
-                        (self.settings.alcohol && item.alcohol) ||
-                        (self.settings.treeNut && item.treeNut) ||
-                        (self.settings.shellfish && item.shellfish) ||
-                        (self.settings.peanuts && item.peanuts) ||
-                        (self.settings.dairy && item.dairy) ||
-                        (self.settings.egg && item.egg) ||
-                        (self.settings.pork && item.pork) ||
-                        (self.settings.fish && item.fish) ||
-                        (self.settings.soy && item.soy) ||
-                        (self.settings.wheat && item.wheat) ||
-                        (self.settings.gluten && item.gluten) ||
-                        (self.settings.coconut && item.coconut) ||
-                        (self.settings.alcohol && item.alcohol)
-                    )
-                }
-                self.items[date]![mealIndex] = items
-            })
+            self.recipes[date] != nil &&
+            mealIndex < self.recipes[date]!.count &&
+            self.recipes[date]![mealIndex] == nil) {
+            // TODO: reenable
+//            nm.getRecipes(mealId: self.meals[date]![mealIndex].id, completion: { recipes in
+//                self.allowed[date]![mealIndex] = recipes.map { recipe in
+//                    !(
+//                        (self.settings.meat && recipe.meat) ||
+//                        (self.settings.animalProducts && recipe.animalProducts) ||
+//                        (self.settings.alcohol && recipe.alcohol) ||
+//                        (self.settings.treeNut && recipe.treeNut) ||
+//                        (self.settings.shellfish && recipe.shellfish) ||
+//                        (self.settings.peanuts && recipe.peanuts) ||
+//                        (self.settings.dairy && recipe.dairy) ||
+//                        (self.settings.egg && recipe.egg) ||
+//                        (self.settings.pork && recipe.pork) ||
+//                        (self.settings.fish && recipe.fish) ||
+//                        (self.settings.soy && recipe.soy) ||
+//                        (self.settings.wheat && recipe.wheat) ||
+//                        (self.settings.gluten && recipe.gluten) ||
+//                        (self.settings.coconut && recipe.coconut) ||
+//                        (self.settings.alcohol && recipe.alcohol)
+//                    )
+//                }
+//                self.recipes[date]![mealIndex] = recipes
+//            })
         }
     }
 
