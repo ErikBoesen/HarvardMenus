@@ -101,10 +101,10 @@
 		035DF3F125291BCE004C95B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		035DF3F425291BCE004C95B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		035DF3F625291BCE004C95B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		035DF3FB25291BCE004C95B0 /* YaleMenusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaleMenusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		035DF3FB25291BCE004C95B0 /* HarvardMenusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarvardMenusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		035DF3FF25291BCE004C95B0 /* YaleMenusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaleMenusTests.swift; sourceTree = "<group>"; };
 		035DF40125291BCE004C95B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		035DF40625291BCE004C95B0 /* YaleMenusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaleMenusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		035DF40625291BCE004C95B0 /* HarvardMenusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarvardMenusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		035DF40A25291BCE004C95B0 /* YaleMenusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaleMenusUITests.swift; sourceTree = "<group>"; };
 		035DF40C25291BCE004C95B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		035DF418252920EE004C95B0 /* HallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallsView.swift; sourceTree = "<group>"; };
@@ -185,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				035DF3E525291BCC004C95B0 /* Harvard Menus.app */,
-				035DF3FB25291BCE004C95B0 /* YaleMenusTests.xctest */,
-				035DF40625291BCE004C95B0 /* YaleMenusUITests.xctest */,
+				035DF3FB25291BCE004C95B0 /* HarvardMenusTests.xctest */,
+				035DF40625291BCE004C95B0 /* HarvardMenusUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,9 +296,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		035DF3E425291BCC004C95B0 /* YaleMenus */ = {
+		035DF3E425291BCC004C95B0 /* HarvardMenus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 035DF40F25291BCE004C95B0 /* Build configuration list for PBXNativeTarget "YaleMenus" */;
+			buildConfigurationList = 035DF40F25291BCE004C95B0 /* Build configuration list for PBXNativeTarget "HarvardMenus" */;
 			buildPhases = (
 				D1F00B61113DC3C360EA7365 /* [CP] Check Pods Manifest.lock */,
 				0348CB9E25AE67CA0089A94B /* ShellScript */,
@@ -311,14 +311,14 @@
 			);
 			dependencies = (
 			);
-			name = YaleMenus;
+			name = HarvardMenus;
 			productName = YaleMenus;
 			productReference = 035DF3E525291BCC004C95B0 /* Harvard Menus.app */;
 			productType = "com.apple.product-type.application";
 		};
-		035DF3FA25291BCE004C95B0 /* YaleMenusTests */ = {
+		035DF3FA25291BCE004C95B0 /* HarvardMenusTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 035DF41225291BCE004C95B0 /* Build configuration list for PBXNativeTarget "YaleMenusTests" */;
+			buildConfigurationList = 035DF41225291BCE004C95B0 /* Build configuration list for PBXNativeTarget "HarvardMenusTests" */;
 			buildPhases = (
 				BB54D0CB4054922CC666F0AC /* [CP] Check Pods Manifest.lock */,
 				035DF3F725291BCE004C95B0 /* Sources */,
@@ -330,14 +330,14 @@
 			dependencies = (
 				035DF3FD25291BCE004C95B0 /* PBXTargetDependency */,
 			);
-			name = YaleMenusTests;
+			name = HarvardMenusTests;
 			productName = YaleMenusTests;
-			productReference = 035DF3FB25291BCE004C95B0 /* YaleMenusTests.xctest */;
+			productReference = 035DF3FB25291BCE004C95B0 /* HarvardMenusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		035DF40525291BCE004C95B0 /* YaleMenusUITests */ = {
+		035DF40525291BCE004C95B0 /* HarvardMenusUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 035DF41525291BCE004C95B0 /* Build configuration list for PBXNativeTarget "YaleMenusUITests" */;
+			buildConfigurationList = 035DF41525291BCE004C95B0 /* Build configuration list for PBXNativeTarget "HarvardMenusUITests" */;
 			buildPhases = (
 				33E9595187B36758B6D43ECD /* [CP] Check Pods Manifest.lock */,
 				035DF40225291BCE004C95B0 /* Sources */,
@@ -350,9 +350,9 @@
 			dependencies = (
 				035DF40825291BCE004C95B0 /* PBXTargetDependency */,
 			);
-			name = YaleMenusUITests;
+			name = HarvardMenusUITests;
 			productName = YaleMenusUITests;
-			productReference = 035DF40625291BCE004C95B0 /* YaleMenusUITests.xctest */;
+			productReference = 035DF40625291BCE004C95B0 /* HarvardMenusUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -391,9 +391,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				035DF3E425291BCC004C95B0 /* YaleMenus */,
-				035DF3FA25291BCE004C95B0 /* YaleMenusTests */,
-				035DF40525291BCE004C95B0 /* YaleMenusUITests */,
+				035DF3E425291BCC004C95B0 /* HarvardMenus */,
+				035DF3FA25291BCE004C95B0 /* HarvardMenusTests */,
+				035DF40525291BCE004C95B0 /* HarvardMenusUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -608,12 +608,12 @@
 /* Begin PBXTargetDependency section */
 		035DF3FD25291BCE004C95B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 035DF3E425291BCC004C95B0 /* YaleMenus */;
+			target = 035DF3E425291BCC004C95B0 /* HarvardMenus */;
 			targetProxy = 035DF3FC25291BCE004C95B0 /* PBXContainerItemProxy */;
 		};
 		035DF40825291BCE004C95B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 035DF3E425291BCC004C95B0 /* YaleMenus */;
+			target = 035DF3E425291BCC004C95B0 /* HarvardMenus */;
 			targetProxy = 035DF40725291BCE004C95B0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -892,7 +892,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		035DF40F25291BCE004C95B0 /* Build configuration list for PBXNativeTarget "YaleMenus" */ = {
+		035DF40F25291BCE004C95B0 /* Build configuration list for PBXNativeTarget "HarvardMenus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				035DF41025291BCE004C95B0 /* Debug */,
@@ -901,7 +901,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		035DF41225291BCE004C95B0 /* Build configuration list for PBXNativeTarget "YaleMenusTests" */ = {
+		035DF41225291BCE004C95B0 /* Build configuration list for PBXNativeTarget "HarvardMenusTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				035DF41325291BCE004C95B0 /* Debug */,
@@ -910,7 +910,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		035DF41525291BCE004C95B0 /* Build configuration list for PBXNativeTarget "YaleMenusUITests" */ = {
+		035DF41525291BCE004C95B0 /* Build configuration list for PBXNativeTarget "HarvardMenusUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				035DF41625291BCE004C95B0 /* Debug */,
